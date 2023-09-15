@@ -1,42 +1,42 @@
 // 2-hbtn_course.js
 export default class HolbertonCourse {
-    constructor(name, length, students) {
-        if (
-            typeof name !== 'string'
-            || typeof length !== 'number'
-            || length <= 0
-            || !Array.isArray(students)
-            || students.length === 0
-        ) {
-            throw new Error(
-                'Invalid arguments. Name must be a string, length must be a positive number, and students must be a non-empty array',
-            );
-        }
-
-        this._name = name;
-        this._length = length;
-        this._students = students;
+  constructor(name, length, students) {
+    if (
+      typeof name !== 'string'
+      || typeof length !== 'number'
+      || length <= 0
+      || !Array.isArray(students)
+      || students.length === 0
+    ) {
+      throw new Error(
+        'Invalid arguments. Name must be a string, length must be a positive number, and students must be a non-empty array',
+      );
     }
 
-    get name() {
-        return this._name;
-    }
+    this._name = name;
+    this._length = length;
+    this._students = students;
+  }
 
-    set name(newName) {
-        if (typeof newName !== 'string') {
-            throw new Error('Name must be a string');
-        }
-        this._name = newName;
-    }
+  get name() {
+    return this._name;
+  }
 
-    get length() {
-        return this._length;
+  set name(newName) {
+    if (typeof newName !== 'string') {
+      throw new Error('Name must be a string');
     }
+    this._name = newName;
+  }
 
-    set length(newLength) {
-        if (typeof newLength !== 'number' || newLength <= 0) {
-            throw new Error('Length must be a positive number');
-        }
+  get length() {
+    return this._length;
+  }
+
+  set length(newLength) {
+    if (typeof newLength !== 'number' || newLength <= 0) {
+      throw new Error('Length must be a positive number');
+    }
         this._length = newLength;
     }
 
