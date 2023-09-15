@@ -37,17 +37,17 @@ export default class HolbertonCourse {
     if (typeof newLength !== 'number' || newLength <= 0) {
       throw new Error('Length must be a positive number');
     }
-        this._length = newLength;
-    }
+    this._length = newLength;
+  }
 
-    get students() {
-        return this._students;
-    }
+  get students() {
+    return this._students;
+  }
 
-    set students(newStudents) {
-        if (!Array.isArray(newStudents) || newStudents.length === 0) {
-            throw new Error('Students must be a non-empty array');
-        }
-        this._students = newStudents;
+  set students(newStudents) {
+    if (!Array.isArray(newStudents) || newStudents.length === 0) {
+      throw new Error('Students must be a non-empty array');
     }
+    this._students = newStudents;
+  }
 }
